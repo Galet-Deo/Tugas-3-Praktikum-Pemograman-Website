@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #f4f4f4;
+}
+
+/* LOGO GLOBAL */
+.logo p {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.logo p span {
+    color: #4e5b27;
+}
+
+/* NAVBAR */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    background: #a99a7e;
+    padding: 0 28px;
+    z-index: 10;
+}
+
+.nav-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 34px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #514832;
+}
+
+.login {
+    margin-left: auto;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/rumah.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(55, 38, 20, 0.42);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-family: Georgia, serif;
+    font-size: 90px;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+
+.hero-content h1 span {
+    color: #4e5b27;
+}
+
+.hero-content p {
+    margin-top: 18px;
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+/* PAGES LOGIN & REGISTER */
+.auth-page {
+    background-color: #372614;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-header {
+    padding: 20px 28px;
+    background: #a99a7e;
+}
+
+.auth-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.auth-box {
+    background: #ffffff;
+    color: #333333;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.form-logo p {
+    color: #333333;
+}
+
+.auth-box h1 {
+    font-family: Georgia, serif;
+    margin: 15px 0 20px;
+    color: #372614;
+}
+
+.auth-box form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.auth-box label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555555;
+}
+
+.auth-box input,
+.auth-box select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.auth-box button {
+    padding: 10px;
+    background-color: #4e5b27;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.auth-box button:hover {
+    background-color: #3b451e;
+}
+
+.account-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.account-text a,
+.home-link {
+    color: #4e5b27;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.home-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 13px;
+}

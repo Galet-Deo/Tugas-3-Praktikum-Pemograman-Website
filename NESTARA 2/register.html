@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - NESTARA</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body class="auth-page">
+
+    <!-- HEADER -->
+    <header class="auth-header">
+        <div class="header-logo">
+            NES<span>TARA</span>
+        </div>
+    </header>
+
+    <!-- CONTAINER REGISTER -->
+    <main class="auth-container">
+        <div class="register-box">
+
+            <div class="form-logo">
+                NES<span>TARA</span>
+            </div>
+
+            <h1>Register</h1>
+
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Jenis Kelamin</label>
+                    <select id="gender" required>
+                        <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                </div>
+
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <p class="account-text">
+                Sudah punya akun? <a href="login.html">Login</a>
+            </p>
+
+            <a href="index.html" class="home-link">Kembali ke beranda</a>
+
+        </div>
+    </main>
+
+    <!-- SCRIPT REGISTER -->
+    <script>
+        const registerForm = document.getElementById("registerForm");
+
+        if (registerForm) {
+            registerForm.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const nama = document.getElementById("nama").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const password = document.getElementById("password").value;
+                const gender = document.getElementById("gender").value;
+
+                const user = {
+                    nama: nama,
+                    email: email,
+                    password: password,
+                    gender: gender
+                };
+
+                localStorage.setItem("user", JSON.stringify(user));
+                localStorage.setItem("isLoggedIn", "true");
+
+                window.location.href = "index.html";
+            });
+        }
+    </script>
+
+</body>
+
+</html>
